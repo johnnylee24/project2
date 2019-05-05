@@ -1,0 +1,117 @@
+@charset "UTF-8";
+html, body {
+	background-color: black;
+    width: 100%;
+	text-align: center;
+	color:white;
+ min-width:1280px;
+}
+
+.game{
+margin-top: 50px;	
+}
+.Game1,
+.Game2{
+	margin-right: 45px
+}
+
+.row1:after{
+	position: absolute;
+display:block;
+    height:3px;
+    background-color:white;
+    content:" ";
+    width:31.5%;
+    margin-top:13px;
+	
+}
+.row2:before{
+position: absolute;
+display:block;
+    height:3px;
+    background-color:white;
+    content:" ";
+    width:34%;
+     left:69%;
+	margin-top:13px;	 
+	 
+}
+.row3:before,
+.row2:after{
+position: absolute;
+display:block;
+    height:3px;
+    background-color:white;
+    content:" ";
+    width:34%;	 	 
+}
+.row3:before{
+  left:70%;
+	margin-top:35px;
+	 
+}
+.row2:after{
+  margin-top:95px;
+  width:30%;
+}
+
+
+
+h3{
+	font-size: 60px;
+}
+
+h5{
+	font-size: 50px;
+	margin-bottom: -5px;
+	margin-top: -5px;
+}
+
+p{
+	padding-bottom:4px;
+    letter-spacing:1.4px
+}
+
+ul{
+	list-style: none;
+	
+}
+ul.event{
+	padding-right:50%;
+}
+
+li{
+	padding-bottom:4%;
+}
+ul.eventT{
+padding-left:40%;	
+  margin-top:-235px;
+
+}
+
+li.time{
+	padding-bottom: 22px;
+	padding-top: 2px;
+		
+}
+
+hr{
+position: absolute;
+margin-left: 51%;
+margin-top:-235px;	
+	
+}
+
+#myloc{
+	text-color:white;
+}
+
+#map{
+position: absolute;
+margin-left:28%;
+
+}
+.t4t{
+	font-siz:100px;
+	padding-left: 10px;
+}

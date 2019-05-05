@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://www.developerdrive.com/demo/html_dragndrop/demo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Developer Drive | Implementing Drag and Drop Functions with HTML5 and JavaScript | Demo</title>
+<style type="text/css">
+/*styling here*/
+div[id^="place"]
+{float:left; width:80px; height:80px; margin:3px; padding:3px; border:1px dotted #333333; background-color:#ffff99;}
+span
+{float:left; width:80px; margin:3px; padding:3px; border:1px solid #999999; color:#333333;}
+.pics, .nums
+{clear:both; text-align:center;}
+</style>
+<script type="text/javascript">
+//function called when drag starts
+function dragIt(theEvent) {
+//tell the browser what to drag
+theEvent.dataTransfer.setData("Text", theEvent.target.id);
+}
+//function called when element drops
+function dropIt(theEvent) {
+//get a reference to the element being dragged
+var theData = theEvent.dataTransfer.getData("Text");
+//get the element
+var theDraggedElement = document.getElementById(theData);
+//add it to the drop element
+theEvent.target.appendChild(theDraggedElement);
+//instruct the browser to allow the drop
+theEvent.preventDefault();
+}
+</script>
+</head>
+<body>
+
+<p>This is a demo to accompany the following tutorial: <a href="http://www.developerdrive.com/2012/03/implementing-drag-and-drop-functions-with-html5-and-javascript/">Implementing Drag and Drop Functions with HTML5 and JavaScript</a></p><hr>
+
+<!--element with draggable pictures-->
+<div class="pics">
+<div id="place1" ondrop="dropIt(event);" ondragover="event.preventDefault();">
+<img src="./pc1_files/pic1.jpg" width="80" height="80" draggable="true" ondragstart="dragIt(event);" id="pic1">
+</div>
+<div id="place2" ondrop="dropIt(event);" ondragover="event.preventDefault();">
+<img src="./pc1_files/pic2.jpg" width="80" height="80" draggable="true" ondragstart="dragIt(event);" id="pic2">
+</div>
+<div id="place3" ondrop="dropIt(event);" ondragover="event.preventDefault();">
+</div>
+<div id="place4" ondrop="dropIt(event);" ondragover="event.preventDefault();">
+</div>
+<div id="place5" ondrop="dropIt(event);" ondragover="event.preventDefault();">
+</div>
+</div>
+
+<!--informative numbers-->
+<div class="nums">
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+</div>
+
+
+
+</body></html>
